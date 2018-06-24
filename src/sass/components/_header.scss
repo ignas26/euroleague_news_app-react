@@ -1,0 +1,24 @@
+.header{
+    background: darkblue;
+    border-bottom: 1px solid black;
+}
+
+.optics{
+    display: flex;
+}
+
+.logo{
+    flex-grow: 1;
+    padding-top: 8px;
+}
+
+.logo-img{
+    width: 75px;
+}
+
+.bars{
+    color: whitesmoke;
+    padding: 15px;
+    cursor:pointer;
+    font-size: 30px;
+}
