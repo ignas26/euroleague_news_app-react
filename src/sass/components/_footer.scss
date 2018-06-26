@@ -1,0 +1,14 @@
+.footer{
+    margin-top: 20px;
+    background: darkblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right{
+    flex-grow: 1;
+    color: whitesmoke;
+    font-size: 12px;
+}
+

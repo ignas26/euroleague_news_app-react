@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import Header from '../../components/Header';
+import Footer from '../../components/Footer';
 
 class LayOut extends Component{
   state={
@@ -21,6 +22,9 @@ render() {
         open={() => this.navigationTrigger(true)}
         />
         {this.props.children}
+
+<Footer></Footer>
+
       </div>
   )
 }
