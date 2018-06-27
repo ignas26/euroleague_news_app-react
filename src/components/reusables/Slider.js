@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 import Template from './Slider_template';
+import {URL} from '../../types/allTypes'
 
 class Slider extends Component {
   state = {
@@ -8,7 +9,7 @@ class Slider extends Component {
   };
 
   componentWillMount(){
-    axios.get(`http://localhost:3004/news?_start=${this.props.start}&_end=${this.props.amount}`)
+    axios.get(`${URL}/news?_start=${this.props.start}&_end=${this.props.amount}`)
         .then( response => {
       this.setState({
         news: response.data
