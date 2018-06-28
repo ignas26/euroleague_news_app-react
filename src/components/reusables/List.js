@@ -1,8 +1,10 @@
 import React, {Component} from 'react';
-//import {CSSTransition, Transition} from 'react-transition-group';
+import {CSSTransition, TransitionGroup} from 'react-transition-group';
 import {Link} from 'react-router-dom';
 import axios from 'axios';
 import {URL} from '../../types/allTypes'
+import Button from './Buttons';
+
 
 class List extends Component{
   state={
@@ -36,6 +38,14 @@ class List extends Component{
     switch(type) {
       case('landing'):
         template=this.state.items.map((item, i)=>(
+            <CSSTransition
+              classNames={{
+              enter:"list-wrapper",
+              enterActive:"list-wrapper-enter"
+            }}
+            timeout={500}
+            key={i}
+            >
           <div key={i}>
             <div className="newslist-item">
               <Link to={`/news/${item.id}`}>
@@ -43,6 +53,7 @@ class List extends Component{
               </Link>
             </div>
           </div>
+            </CSSTransition>
         ));
         break;
       default: template=null;
@@ -53,10 +64,18 @@ class List extends Component{
   render(){
     return(
         <div>
+          <TransitionGroup
+          component="div"
+          className="transition-list"
+          >
           {this.renderNews(this.props.type)}
-          <div onClick={()=>this.loadMore()}>
-            LOAD MORE
-          </div>
+          </TransitionGroup>
+
+          <Button
+          type="more-news"
+          loadmore={()=>this.loadMore()}
+          button="More News"
+          />
         </div>
     )
   }

@@ -1,6 +1,6 @@
 .newslist-item{
-    border:1px solid #f2f2f2;
-    background: whitesmoke;
+    border:0.5px solid darkgray;
+    background: white;
     margin-top: 0px;
     padding: 8px 5px 0 5px;
 }
@@ -9,9 +9,22 @@
     font-size: 15px;
     line-height: 19px;
     margin: 4px 0;
-    color: dimgrey;
+    color: lightslategrey;
 }
 
 .newslist-item a{
     text-decoration: none;
+}
+
+.list-wrapper{
+    box-sizing: border-box;
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: all .5s ease-in;
+}
+
+
+.list-wrapper-enter{
+    opacity:1;
+    transform: translateX(0%);
 }
