@@ -4,77 +4,93 @@ import {Link} from 'react-router-dom';
 import axios from 'axios';
 import {URL} from '../../types/allTypes'
 import Button from './Buttons';
+import TeamData from './TeamData';
 
 
-class List extends Component{
-  state={
-  items:[],
-  start:this.props.start,
-  end:this.props.start + this.props.amount,
-  amount:this.props.amount
+class List extends Component {
+  state = {
+    teams: [],
+    items: [],
+    start: this.props.start,
+    end: this.props.start + this.props.amount,
+    amount: this.props.amount
   };
 
-  componentWillMount(){
+  componentWillMount() {
     this.request(this.state.start, this.state.end)
   }
 
 
-  request= (start, end) =>{
-    axios.get(`${URL}/news?_start=${start}&_end=${end}`).then(response=>{
+  request = (start, end) => {
+    if (this.state.teams.length < 1) {
+      axios.get(`${URL}/teams`).then(response => {
+        this.setState({
+          teams: response.data
+        })
+      })
+    }
+
+    axios.get(`${URL}/news?_start=${start}&_end=${end}`).then(response => {
       this.setState({
-        items:[...this.state.items, ...response.data]
+        items: [...this.state.items, ...response.data]
       })
     })
   };
 
-  loadMore =()=>{
+  loadMore = () => {
     let end = this.state.end + this.state.amount;
     this.request(this.state.end, end)
   };
 
 
-  renderNews = (type) =>{
-    let template =null;
-    switch(type) {
+  renderNews = (type) => {
+    let template = null;
+    switch (type) {
       case('landing'):
-        template=this.state.items.map((item, i)=>(
+        template = this.state.items.map((item, i) => (
             <CSSTransition
-              classNames={{
-              enter:"list-wrapper",
-              enterActive:"list-wrapper-enter"
-            }}
-            timeout={500}
-            key={i}
+                classNames={{
+                  enter: "list-wrapper",
+                  enterActive: "list-wrapper-enter"
+                }}
+                timeout={500}
+                key={i}
             >
-          <div key={i}>
-            <div className="newslist-item">
-              <Link to={`/news/${item.id}`}>
-                <h2>{item.title}</h2>
-              </Link>
-            </div>
-          </div>
+              <div key={i}>
+                <div className="newslist-item">
+                  <Link to={`/news/${item.id}`}>
+                    <TeamData
+                        teams={this.state.teams}
+                        teamid={item.team}
+                        date={item.date}
+                    />
+                    <h2>{item.title}</h2>
+                  </Link>
+                </div>
+              </div>
             </CSSTransition>
         ));
         break;
-      default: template=null;
+      default:
+        template = null;
     }
     return template;
   };
 
-  render(){
-    return(
+  render() {
+    return (
         <div>
           <TransitionGroup
-          component="div"
-          className="transition-list"
+              component="div"
+              className="transition-list"
           >
-          {this.renderNews(this.props.type)}
+            {this.renderNews(this.props.type)}
           </TransitionGroup>
 
           <Button
-          type="more-news"
-          loadmore={()=>this.loadMore()}
-          button="More News"
+              type="more-news"
+              loadmore={() => this.loadMore()}
+              button="More News"
           />
         </div>
     )
