@@ -1,0 +1,29 @@
+.clip-item{
+    display: flex;
+    border-bottom: 2px solid whitesmoke;
+    background: white;
+}
+
+.clip-item h2{
+    font-size: 13px;
+    color: lightslategrey;
+}
+
+.left{
+background-size: cover !important;
+}
+
+.left div{
+    width: 90px;
+    height: 90px;
+    background-size: 40px !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    background: url('/images/play.png');
+}
+
+.right{
+flex-grow: 1;
+    padding: 10px;
+}
+

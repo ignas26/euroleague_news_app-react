@@ -164,16 +164,16 @@
     "clips":[
         {
           "id":1,
-          "team":2,
+          "team":1,
           "title":"the scale is similar to that of points scored, (40 is an outstanding performance, 10 is an average performance, etc.).",
-          "image":"1.jpeg",
+          "image":"1.jpg",
           "url":"XKI0xlnMBZQ",
           "date":"10/12/2018",
           "tags":["Belgrade","Moscow"]
         },
         {
           "id":2,
-          "team":8,
+          "team":2,
           "title":"Sed ut perspiciatis unde omnis iste natus error sit",
           "image":"2.jpg",
           "url":"XKI0xlnMBZQ",
@@ -182,7 +182,7 @@
         },
         {
           "id":3,
-          "team":8,
+          "team":3,
           "title":"Laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis",
           "image":"3.jpg",
           "url":"XKI0xlnMBZQ",
@@ -191,7 +191,7 @@
         },
         {
           "id":4,
-          "team":2,
+          "team":4,
           "title":"the scale is similar to that of points scored, (40 is an outstanding performance, 10 is an average performance, etc.).",
           "image":"4.jpg",
           "url":"XKI0xlnMBZQ",
@@ -200,7 +200,7 @@
         },
         {
           "id":5,
-          "team":8,
+          "team":5,
           "title":"Sthe scale is similar to that of points scored, (40 is an outstanding performance, 10 is an average performance, etc.).",
           "image":"5.jpg",
           "url":"XKI0xlnMBZQ",
@@ -209,7 +209,7 @@
         },
         {
           "id":6,
-          "team":8,
+          "team":6,
           "title":"Laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis",
           "image":"6.jpg",
           "url":"XKI0xlnMBZQ",
@@ -219,7 +219,7 @@
 
         {
           "id":7,
-          "team":2,
+          "team":7,
           "title":"Qui blanditiis praesentium voluptatum deleniti atque corrupti quos",
           "image":"7.jpg",
           "url":"XKI0xlnMBZQ",
@@ -237,7 +237,7 @@
         },
         {
           "id":9,
-          "team":8,
+          "team":9,
           "title":"the scale is similar to that of points scored, (40 is an outstanding performance, 10 is an average performance, etc.).",
           "image":"9.jpg",
           "url":"XKI0xlnMBZQ",
@@ -246,7 +246,7 @@
         },
         {
           "id":10,
-          "team":2,
+          "team":10,
           "title":"Qui blanditiis praesentium voluptatum deleniti atque corrupti quos",
           "image":"10.jpg",
           "url":"XKI0xlnMBZQ",
@@ -255,7 +255,7 @@
         },
         {
           "id":11,
-          "team":8,
+          "team":11,
           "title":"Sed ut perspiciatis unde omnis iste natus error sit",
           "image":"11.jpg",
           "url":"XKI0xlnMBZQ",
@@ -264,7 +264,7 @@
         },
         {
           "id":12,
-          "team":8,
+          "team":12,
           "title":"the scale is similar to that of points scored, (40 is an outstanding performance, 10 is an average performance, etc.).",
           "image":"12.jpg",
           "url":"XKI0xlnMBZQ",
@@ -273,7 +273,7 @@
         },
         {
           "id":13,
-          "team":8,
+          "team":13,
           "title":"the scale is similar to that of points scored, (40 is an outstanding performance, 10 is an average performance, etc.).",
           "image":"13.jpg",
           "url":"XKI0xlnMBZQ",
@@ -282,7 +282,7 @@
         },
         {
           "id":14,
-          "team":8,
+          "team":14,
           "title":"Laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis",
           "image":"14.jpg",
           "url":"XKI0xlnMBZQ",
@@ -291,7 +291,7 @@
         },
         {
           "id":15,
-          "team":2,
+          "team":15,
           "title":"Qui blanditiis praesentium voluptatum deleniti atque corrupti quos",
           "image":"15.jpg",
           "url":"XKI0xlnMBZQ",
@@ -300,7 +300,7 @@
         },
         {
           "id":16,
-          "team":8,
+          "team":16,
           "title":"the scale is similar to that of points scored, (40 is an outstanding performance, 10 is an average performance, etc.).",
           "image":"16.jpg",
           "url":"XKI0xlnMBZQ",

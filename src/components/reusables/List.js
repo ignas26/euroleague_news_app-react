@@ -3,7 +3,7 @@ import {CSSTransition, TransitionGroup} from 'react-transition-group';
 import {Link} from 'react-router-dom';
 import axios from 'axios';
 import {URL} from '../../types/allTypes'
-import Button from './Buttons';
+import Buttons from './Buttons';
 import TeamData from './TeamData';
 
 
@@ -32,7 +32,9 @@ class List extends Component {
 
     axios.get(`${URL}/news?_start=${start}&_end=${end}`).then(response => {
       this.setState({
-        items: [...this.state.items, ...response.data]
+        items: [...this.state.items, ...response.data],
+        start,
+        end
       })
     })
   };
@@ -86,9 +88,8 @@ class List extends Component {
           >
             {this.renderNews(this.props.type)}
           </TransitionGroup>
-
-          <Button
-              type="more-news"
+          <Buttons
+              type="loadmore"
               loadmore={() => this.loadMore()}
               button="More News"
           />
