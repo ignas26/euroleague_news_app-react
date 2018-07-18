@@ -1,0 +1,29 @@
+.newsBody{
+    background: white;
+    margin: 0 5px 0 5px;
+    border: 1px solid whitesmoke;
+    padding: 10px;
+}
+
+.newsBody h1{
+    font-size: 25px;
+    font-weight:400;
+    color: gray;
+    margin: 15px 0;
+}
+
+
+.newsImage{
+background-size: cover!important;
+    width: 100%;
+    min-height:200px;
+    background-position: center center!important;
+    background-repeat: no-repeat!important;
+}
+
+.newsText{
+    font-weight: 300;
+    color: gray;
+    line-height: 23px;
+    margin: 15px 0;
+}
