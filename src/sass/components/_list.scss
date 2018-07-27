@@ -28,3 +28,30 @@
     opacity:1;
     transform: translateX(0%);
 }
+
+.news-wrapper{
+    display: flex;
+    border-bottom: 2px solid whitesmoke;
+    background: white;
+    h2{
+        font-size: 12px;
+        color: slategray;
+    }
+}
+
+.left{
+background-size: cover!important;
+}
+
+.left div{
+    width: 90px;
+    height: 90px;
+    background-size: 40px !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+}
+
+.right{
+    flex-grow: 1;
+    padding: 10px;
+}

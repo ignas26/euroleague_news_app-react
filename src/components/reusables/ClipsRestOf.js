@@ -9,7 +9,6 @@ const ClipsRestOf =(props)=>(
   data={props.data}
   teams={props.teams}
   />
-<h1>aaa</h1>
 </div>
 
 );

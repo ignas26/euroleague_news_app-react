@@ -16,13 +16,13 @@ const NavItems = () => {
       type: "option",
       icon: 'file-text-o',
       text: 'News',
-      link: '/news'
+      link: '/sbnews'
     },
     {
       type: "option",
       icon: 'play',
       text: 'Videos',
-      link: '/videos'
+      link: '/clips'
     },
     {
       type: "option",
